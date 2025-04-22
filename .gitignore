@@ -1,0 +1,47 @@
+# Игнорировать настройки VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Локальная история файлов VSCode
+.history/
+
+# Игнорировать пользовательские настройки (если нужно)
+# .vscode/settings.json
+
+# Временные файлы
+*.swp
+*.swo
+*~
+~$*
+
+# Логи и дампы
+*.log
+*.pid
+*.gz
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+
+# Файлы окружения (env)
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Игнорировать node_modules (если используется Node.js)
+node_modules/
+
+# Игнорировать билды и зависимости (если есть)
+dist/
+build/
+out/
+*.exe
+*.dll
+*.so
+*.a
