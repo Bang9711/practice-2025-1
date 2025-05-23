@@ -97,7 +97,7 @@ def test_horoscope_generation():
     assert prediction in horoscope_predictions[test_sign]
     print(f"Тест пройден для {test_sign}")
 
-## Возможные улучшения
+## Возможные улучшения (модификация)
 ### Диаграмма улучшений
 ![alt text](images/диаграмма3.png)
 
