@@ -1,0 +1,81 @@
+<!doctype html><html lang=ru-ru><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><title>Создание моего бота | Группа игровой компьютерной индустрии: Семилучье</title>
+<meta name=viewport content="width=device-width,minimum-scale=1"><meta name=description content="Техническое руководство: Telegram-бот для предсказания гороскопов
+Введение
+Это руководство описывает создание Telegram-бота для генерации ежедневных гороскопов. Бот написан на Python с использованием библиотеки pyTelegramBotAPI.
+Архитектура системы
+Диаграмма последовательностей
+
+Пошаговая реализация
+Настройка проекта
+
+Установите Python 3.8+
+Установите необходимые библиотеки:
+pip install pyTelegramBotAPI
+
+Структура кода
+#Импорт библиотек
+import telebot
+from telebot import types
+import random
+#Конфигурация бота
+TOKEN = &ldquo;ВАШ_ТОКЕН&rdquo;
+bot = telebot.TeleBot(TOKEN)
+#Данные гороскопов
+zodiac_signs = [&ldquo;Овен&rdquo;, &ldquo;Телец&rdquo;, &mldr;, &ldquo;Рыбы&rdquo;]
+horoscope_predictions = {
+&ldquo;Овен&rdquo;: [&ldquo;Предсказание 1&rdquo;, &ldquo;Предсказание 2&rdquo;],
+&mldr;
+}"><meta name=generator content="Hugo 0.147.3"><meta name=robots content="index, follow"><link rel=stylesheet href=/ananke/css/main.min.d05fb5f317fcf33b3a52936399bdf6f47dc776516e1692e412ec7d76f4a5faa2.css><link rel=canonical href=http://localhost:1313/bot/mybot/><meta property="og:url" content="http://localhost:1313/bot/mybot/"><meta property="og:site_name" content="Группа игровой компьютерной индустрии: Семилучье"><meta property="og:title" content="Создание моего бота"><meta property="og:description" content="Техническое руководство: Telegram-бот для предсказания гороскопов Введение Это руководство описывает создание Telegram-бота для генерации ежедневных гороскопов. Бот написан на Python с использованием библиотеки pyTelegramBotAPI.
+Архитектура системы Диаграмма последовательностей Пошаговая реализация Настройка проекта Установите Python 3.8+ Установите необходимые библиотеки: pip install pyTelegramBotAPI Структура кода #Импорт библиотек import telebot from telebot import types import random
+#Конфигурация бота TOKEN = “ВАШ_ТОКЕН” bot = telebot.TeleBot(TOKEN)
+#Данные гороскопов zodiac_signs = [“Овен”, “Телец”, …, “Рыбы”] horoscope_predictions = { “Овен”: [“Предсказание 1”, “Предсказание 2”], … }"><meta property="og:locale" content="ru_ru"><meta property="og:type" content="article"><meta property="article:section" content="bot"><meta itemprop=name content="Создание моего бота"><meta itemprop=description content="Техническое руководство: Telegram-бот для предсказания гороскопов Введение Это руководство описывает создание Telegram-бота для генерации ежедневных гороскопов. Бот написан на Python с использованием библиотеки pyTelegramBotAPI.
+Архитектура системы Диаграмма последовательностей Пошаговая реализация Настройка проекта Установите Python 3.8+ Установите необходимые библиотеки: pip install pyTelegramBotAPI Структура кода #Импорт библиотек import telebot from telebot import types import random
+#Конфигурация бота TOKEN = “ВАШ_ТОКЕН” bot = telebot.TeleBot(TOKEN)
+#Данные гороскопов zodiac_signs = [“Овен”, “Телец”, …, “Рыбы”] horoscope_predictions = { “Овен”: [“Предсказание 1”, “Предсказание 2”], … }"><meta itemprop=wordCount content="297"><meta name=twitter:card content="summary"><meta name=twitter:title content="Создание моего бота"><meta name=twitter:description content="Техническое руководство: Telegram-бот для предсказания гороскопов Введение Это руководство описывает создание Telegram-бота для генерации ежедневных гороскопов. Бот написан на Python с использованием библиотеки pyTelegramBotAPI.
+Архитектура системы Диаграмма последовательностей Пошаговая реализация Настройка проекта Установите Python 3.8+ Установите необходимые библиотеки: pip install pyTelegramBotAPI Структура кода #Импорт библиотек import telebot from telebot import types import random
+#Конфигурация бота TOKEN = “ВАШ_ТОКЕН” bot = telebot.TeleBot(TOKEN)
+#Данные гороскопов zodiac_signs = [“Овен”, “Телец”, …, “Рыбы”] horoscope_predictions = { “Овен”: [“Предсказание 1”, “Предсказание 2”], … }"></head><body class="ma0 avenir bg-near-white production"><header><div class=bg-black><nav class="pv3 ph3 ph4-ns" role=navigation><div class="flex-l center items-center justify-between"><a href=/ class="f3 fw2 hover-white white-90 dib no-underline">Группа игровой компьютерной индустрии: Семилучье</a><div class="flex-l items-center"><ul class="pl0 mr3"><li class="list f5 f4-ns fw4 dib pr3"><a class="hover-white white-90 no-underline" href=/ title="Главная page">Главная</a></li><li class="list f5 f4-ns fw4 dib pr3"><a class="hover-white white-90 no-underline" href=/about/ title="О проекте page">О проекте</a></li><li class="list f5 f4-ns fw4 dib pr3"><a class="hover-white white-90 no-underline" href=/team/ title="Команда page">Команда</a></li><li class="list f5 f4-ns fw4 dib pr3"><a class="hover-white white-90 no-underline" href=/journal/ title="Журнал page">Журнал</a></li><li class="list f5 f4-ns fw4 dib pr3"><a class="hover-white white-90 no-underline" href=/resources/ title="Ресурсы page">Ресурсы</a></li><li class="list f5 f4-ns fw4 dib pr3"><a class="hover-white white-90 no-underline" href=/bot/ title="Вариативная часть page">Вариативная часть</a></li><li class="list f5 f4-ns fw4 dib pr3"><a class="hover-white white-90 no-underline" href=/reports/ title="Мероприятия page">Мероприятия</a></li></ul><div class=ananke-socials></div></div></div></nav></div></header><main class=pb7 role=main><article class="flex-l mw8 center ph3 flex-wrap justify-between"><header class="mt4 w-100"><aside class="instapaper_ignoref b helvetica tracked ttu">Бот</aside><div id=sharing class="mt3 ananke-socials"></div><h1 class="f1 athelas mt3 mb1">Создание моего бота</h1></header><div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id=техническое-руководство-telegram-бот-для-предсказания-гороскопов>Техническое руководство: Telegram-бот для предсказания гороскопов</h1><h2 id=введение>Введение</h2><p>Это руководство описывает создание Telegram-бота для генерации ежедневных гороскопов. Бот написан на Python с использованием библиотеки pyTelegramBotAPI.</p><h2 id=архитектура-системы>Архитектура системы</h2><h3 id=диаграмма-последовательностей>Диаграмма последовательностей</h3><p><img src=/images/%D0%B4%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC2.png alt=диаграмма></p><h2 id=пошаговая-реализация>Пошаговая реализация</h2><h3 id=настройка-проекта>Настройка проекта</h3><ol><li>Установите Python 3.8+</li><li>Установите необходимые библиотеки:
+pip install pyTelegramBotAPI</li></ol><h3 id=структура-кода>Структура кода</h3><p>#Импорт библиотек
+import telebot
+from telebot import types
+import random</p><p>#Конфигурация бота
+TOKEN = &ldquo;ВАШ_ТОКЕН&rdquo;
+bot = telebot.TeleBot(TOKEN)</p><p>#Данные гороскопов
+zodiac_signs = [&ldquo;Овен&rdquo;, &ldquo;Телец&rdquo;, &mldr;, &ldquo;Рыбы&rdquo;]
+horoscope_predictions = {
+&ldquo;Овен&rdquo;: [&ldquo;Предсказание 1&rdquo;, &ldquo;Предсказание 2&rdquo;],
+&mldr;
+}</p><p>#Обработчики сообщений
+@bot.message_handler(commands=[&lsquo;start&rsquo;])
+def send_welcome(message):
+#Создание клавиатуры
+markup = types.ReplyKeyboardMarkup(row_width=3, resize_keyboard=True)
+buttons = [types.KeyboardButton(sign) for sign in zodiac_signs]
+markup.add(*buttons)</p><p>#Отправка сообщения
+bot.reply_to(message, &ldquo;Приветственное сообщение&rdquo;, reply_markup=markup)</p><p>@bot.message_handler(func=lambda message: message.text in zodiac_signs)
+def send_horoscope(message):
+#Логика генерации гороскопа
+sign = message.text
+prediction = random.choice(horoscope_predictions[sign])</p><p>#Форматирование ответа
+response = f"<em>{sign}</em>, вот твой гороскоп:\n\n_{prediction}_"
+bot.reply_to(message, response, parse_mode=&ldquo;Markdown&rdquo;)</p><p>#Запуск бота
+if name == &ldquo;main&rdquo;:
+bot.polling()</p><h2 id=детали-реализации>Детали реализации</h2><h3 id=клавиатура-выбора-знака>Клавиатура выбора знака</h3><p>markup = types.ReplyKeyboardMarkup(row_width=3, resize_keyboard=True)
+buttons = [types.KeyboardButton(sign) for sign in zodiac_signs]
+markup.add(*buttons)</p><h3 id=генерация-предсказаний>Генерация предсказаний</h3><p>prediction = random.choice(horoscope_predictions[sign])</p><h3 id=форматирование-ответа>Форматирование ответа</h3><p>Использование Markdown для красивого отображения:
+response = f"<em>{sign}</em>, вот твой гороскоп:\n\n_{prediction}_"
+bot.reply_to(message, response, parse_mode=&ldquo;Markdown&rdquo;)</p><h2 id=расширение-функционала>Расширение функционала</h2><h3 id=добавление-новых-команд>Добавление новых команд</h3><p>@bot.message_handler(commands=[&lsquo;help&rsquo;])
+def send_help(message):
+help_text = &ldquo;Доступные команды:\n/start - Начать\n/help - Помощь&rdquo;
+bot.reply_to(message, help_text)</p><h3 id=логирование>Логирование</h3><p>import logging</p><p>logging.basicConfig(
+level=logging.INFO,
+format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
+logger = logging.getLogger(name)</p><p>@bot.message_handler(func=lambda message: True)
+def log_message(message):
+logger.info(f"Получено сообщение: {message.text}")</p><h2 id=тестирование>Тестирование</h2><h3 id=пример-тестирования>Пример тестирования</h3><p>def test_horoscope_generation():
+test_sign = &ldquo;Овен&rdquo;
+prediction = random.choice(horoscope_predictions[test_sign])
+assert prediction in horoscope_predictions[test_sign]
+print(f"Тест пройден для {test_sign}")</p><h2 id=возможные-улучшения-модификация>Возможные улучшения (модификация)</h2><h3 id=диаграмма-улучшений>Диаграмма улучшений</h3><p><img src=/images/%D0%B4%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B03.png alt=диаграмма></p><h3 id=список-улучшений>Список улучшений</h3><ol><li>Интеграция с внешними API астрологии</li><li>Добавление временных меток для ежедневных гороскопов</li><li>Система подписок на ежедневные гороскопы</li></ol><h2 id=пример-выполнения-программы-и-полный-код>Пример выполнения программы и полный код</h2><p><img src=/images/%D0%B1%D0%BE%D1%82.png alt=бот>
+<img src=/images/%D0%BA%D0%BE%D0%B4.png alt=код></p><h2 id=заключение>Заключение</h2><p>Этот бот представляет собой простую, но функциональную реализацию сервиса гороскопов в Telegram. Руководство охватывает все аспекты разработки - от архитектуры до тестирования. Код легко модифицируется и расширяется под конкретные нужды.</p><ul class=pa0></ul><div class="mt6 instapaper_ignoref"></div></div><aside class="w-30-l mt6-l"></aside></article></main><footer class="bg-black bottom-0 w-100 pa3" role=contentinfo><div class="flex justify-between"><a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href=http://localhost:1313/>&copy; Группа игровой компьютерной индустрии: Семилучье 2025</a><div><div class=ananke-socials></div></div></div></footer></body></html>

@@ -1,0 +1,57 @@
+<!doctype html><html lang=ru-ru><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><title>Простой бот | Группа игровой компьютерной индустрии: Семилучье</title>
+<meta name=viewport content="width=device-width,minimum-scale=1"><meta name=description content="Руководство по созданию простого Telegram-бота
+Введение
+В этом руководстве мы создадим простейшего Telegram-бота, который будет отвечать на команды пользователя. Это идеальный проект для начинающих, позволяющий понять основы работы с Telegram Bot API.
+Исследование предметной области
+Анализ возможностей Telegram Bot API
+Telegram предоставляет мощный API для создания ботов с такими возможностями:
+
+Отправка и получение сообщений
+Работа с клавиатурами
+Обработка команд
+Хранение состояния
+
+Выбор инструментов
+Для нашего бота мы будем использовать:
+
+Python 3.8+ (простой и понятный синтаксис)
+Библиотеку python-telegram-bot (официальная обертка для API)
+Виртуальное окружение (для изоляции зависимостей)
+
+Техническое руководство
+Подготовка окружения
+
+Установите Python с официального сайта
+Создайте папку для проекта
+Создайте виртуальное окружение:
+python -m venv venv
+source venv/bin/activate  (Для Linux/Mac)
+venv\Scripts\activate     (Для Windows)
+
+Установка зависимостей
+pip install python-telegram-bot"><meta name=generator content="Hugo 0.147.3"><meta name=robots content="index, follow"><link rel=stylesheet href=/ananke/css/main.min.d05fb5f317fcf33b3a52936399bdf6f47dc776516e1692e412ec7d76f4a5faa2.css><link rel=canonical href=http://localhost:1313/bot/_rucovod/><meta property="og:url" content="http://localhost:1313/bot/_rucovod/"><meta property="og:site_name" content="Группа игровой компьютерной индустрии: Семилучье"><meta property="og:title" content="Простой бот"><meta property="og:description" content="Руководство по созданию простого Telegram-бота Введение В этом руководстве мы создадим простейшего Telegram-бота, который будет отвечать на команды пользователя. Это идеальный проект для начинающих, позволяющий понять основы работы с Telegram Bot API.
+Исследование предметной области Анализ возможностей Telegram Bot API Telegram предоставляет мощный API для создания ботов с такими возможностями:
+Отправка и получение сообщений Работа с клавиатурами Обработка команд Хранение состояния Выбор инструментов Для нашего бота мы будем использовать:
+Python 3.8+ (простой и понятный синтаксис) Библиотеку python-telegram-bot (официальная обертка для API) Виртуальное окружение (для изоляции зависимостей) Техническое руководство Подготовка окружения Установите Python с официального сайта Создайте папку для проекта Создайте виртуальное окружение: python -m venv venv source venv/bin/activate (Для Linux/Mac) venv\Scripts\activate (Для Windows) Установка зависимостей pip install python-telegram-bot"><meta property="og:locale" content="ru_ru"><meta property="og:type" content="article"><meta property="article:section" content="bot"><meta itemprop=name content="Простой бот"><meta itemprop=description content="Руководство по созданию простого Telegram-бота Введение В этом руководстве мы создадим простейшего Telegram-бота, который будет отвечать на команды пользователя. Это идеальный проект для начинающих, позволяющий понять основы работы с Telegram Bot API.
+Исследование предметной области Анализ возможностей Telegram Bot API Telegram предоставляет мощный API для создания ботов с такими возможностями:
+Отправка и получение сообщений Работа с клавиатурами Обработка команд Хранение состояния Выбор инструментов Для нашего бота мы будем использовать:
+Python 3.8+ (простой и понятный синтаксис) Библиотеку python-telegram-bot (официальная обертка для API) Виртуальное окружение (для изоляции зависимостей) Техническое руководство Подготовка окружения Установите Python с официального сайта Создайте папку для проекта Создайте виртуальное окружение: python -m venv venv source venv/bin/activate (Для Linux/Mac) venv\Scripts\activate (Для Windows) Установка зависимостей pip install python-telegram-bot"><meta itemprop=wordCount content="276"><meta name=twitter:card content="summary"><meta name=twitter:title content="Простой бот"><meta name=twitter:description content="Руководство по созданию простого Telegram-бота Введение В этом руководстве мы создадим простейшего Telegram-бота, который будет отвечать на команды пользователя. Это идеальный проект для начинающих, позволяющий понять основы работы с Telegram Bot API.
+Исследование предметной области Анализ возможностей Telegram Bot API Telegram предоставляет мощный API для создания ботов с такими возможностями:
+Отправка и получение сообщений Работа с клавиатурами Обработка команд Хранение состояния Выбор инструментов Для нашего бота мы будем использовать:
+Python 3.8+ (простой и понятный синтаксис) Библиотеку python-telegram-bot (официальная обертка для API) Виртуальное окружение (для изоляции зависимостей) Техническое руководство Подготовка окружения Установите Python с официального сайта Создайте папку для проекта Создайте виртуальное окружение: python -m venv venv source venv/bin/activate (Для Linux/Mac) venv\Scripts\activate (Для Windows) Установка зависимостей pip install python-telegram-bot"></head><body class="ma0 avenir bg-near-white production"><header><div class=bg-black><nav class="pv3 ph3 ph4-ns" role=navigation><div class="flex-l center items-center justify-between"><a href=/ class="f3 fw2 hover-white white-90 dib no-underline">Группа игровой компьютерной индустрии: Семилучье</a><div class="flex-l items-center"><ul class="pl0 mr3"><li class="list f5 f4-ns fw4 dib pr3"><a class="hover-white white-90 no-underline" href=/ title="Главная page">Главная</a></li><li class="list f5 f4-ns fw4 dib pr3"><a class="hover-white white-90 no-underline" href=/about/ title="О проекте page">О проекте</a></li><li class="list f5 f4-ns fw4 dib pr3"><a class="hover-white white-90 no-underline" href=/team/ title="Команда page">Команда</a></li><li class="list f5 f4-ns fw4 dib pr3"><a class="hover-white white-90 no-underline" href=/journal/ title="Журнал page">Журнал</a></li><li class="list f5 f4-ns fw4 dib pr3"><a class="hover-white white-90 no-underline" href=/resources/ title="Ресурсы page">Ресурсы</a></li><li class="list f5 f4-ns fw4 dib pr3"><a class="hover-white white-90 no-underline" href=/bot/ title="Вариативная часть page">Вариативная часть</a></li><li class="list f5 f4-ns fw4 dib pr3"><a class="hover-white white-90 no-underline" href=/reports/ title="Мероприятия page">Мероприятия</a></li></ul><div class=ananke-socials></div></div></div></nav></div></header><main class=pb7 role=main><article class="flex-l mw8 center ph3 flex-wrap justify-between"><header class="mt4 w-100"><aside class="instapaper_ignoref b helvetica tracked ttu">Бот</aside><div id=sharing class="mt3 ananke-socials"></div><h1 class="f1 athelas mt3 mb1">Простой бот</h1></header><div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id=руководство-по-созданию-простого-telegram-бота>Руководство по созданию простого Telegram-бота</h1><h2 id=введение>Введение</h2><p>В этом руководстве мы создадим простейшего Telegram-бота, который будет отвечать на команды пользователя. Это идеальный проект для начинающих, позволяющий понять основы работы с Telegram Bot API.</p><h2 id=исследование-предметной-области>Исследование предметной области</h2><h3 id=анализ-возможностей-telegram-bot-api>Анализ возможностей Telegram Bot API</h3><p>Telegram предоставляет мощный API для создания ботов с такими возможностями:</p><ul><li>Отправка и получение сообщений</li><li>Работа с клавиатурами</li><li>Обработка команд</li><li>Хранение состояния</li></ul><h3 id=выбор-инструментов>Выбор инструментов</h3><p>Для нашего бота мы будем использовать:</p><ul><li>Python 3.8+ (простой и понятный синтаксис)</li><li>Библиотеку python-telegram-bot (официальная обертка для API)</li><li>Виртуальное окружение (для изоляции зависимостей)</li></ul><h2 id=техническое-руководство>Техническое руководство</h2><h3 id=подготовка-окружения>Подготовка окружения</h3><ol><li>Установите Python с официального сайта</li><li>Создайте папку для проекта</li><li>Создайте виртуальное окружение:
+python -m venv venv
+source venv/bin/activate (Для Linux/Mac)
+venv\Scripts\activate (Для Windows)</li></ol><h3 id=установка-зависимостей>Установка зависимостей</h3><p>pip install python-telegram-bot</p><h3 id=создание-бота>Создание бота</h3><ol><li>Найдите в Telegram @BotFather</li><li>Отправьте команду /newbot</li><li>Следуйте инструкциям и получите токен</li></ol><h3 id=базовый-код-бота>Базовый код бота</h3><p>Создайте файл bot.py:
+from telegram import Update
+from telegram.ext import Application, CommandHandler, MessageHandler, filters</p><p>TOKEN = &ldquo;ВАШ_ТОКЕН&rdquo;</p><p>async def start(update: Update, context):
+await update.message.reply_text(&ldquo;Привет! Я простой бот.&rdquo;)</p><p>async def echo(update: Update, context):
+await update.message.reply_text(update.message.text)</p><p>def main():
+app = Application.builder().token(TOKEN).build()</p><p>app.add_handler(CommandHandler(&ldquo;start&rdquo;, start))
+app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, echo))</p><p>app.run_polling()</p><p>if name == &ldquo;main&rdquo;:
+main()</p><h3 id=запуск-бота>Запуск бота</h3><p>python bot.py</p><h2 id=архитектура-бота>Архитектура бота</h2><p><img src=/images/%D0%B4%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC.png alt=архитектура></p><h2 id=дополнительные-функции>Дополнительные функции</h2><h3 id=добавление-новых-команд>Добавление новых команд</h3><p>async def help(update: Update, context):
+await update.message.reply_text(&ldquo;Доступные команды:\n/start - Начать\n/help - Помощь&rdquo;)</p><p>#В функции main()
+app.add_handler(CommandHandler(&ldquo;help&rdquo;, help))</p><h3 id=клавиатура>Клавиатура</h3><p>from telegram import ReplyKeyboardMarkup</p><p>async def menu(update: Update, context):
+keyboard = [[&ldquo;Option 1&rdquo;, &ldquo;Option 2&rdquo;]]
+reply_markup = ReplyKeyboardMarkup(keyboard)
+await update.message.reply_text(&ldquo;Выберите:&rdquo;, reply_markup=reply_markup)</p><h2 id=развертывание>Развертывание</h2><h3 id=требования>Требования</h3><p>Создайте файл requirements.txt:
+python-telegram-bot==20.3</p><h3 id=запуск-на-сервере>Запуск на сервере</h3><p>Для постоянной работы можно использовать:</p><ul><li>PythonAnywhere</li><li>Heroku</li><li>Render</li></ul><h2 id=заключение>Заключение</h2><p>Теперь у вас есть работающий Telegram-бот! Дальнейшие шаги:</p><ul><li>Добавить обработку разных типов сообщений</li><li>Реализовать хранение данных</li><li>Настроить вебхуки для более стабильной работы</li></ul><ul class=pa0></ul><div class="mt6 instapaper_ignoref"></div></div><aside class="w-30-l mt6-l"></aside></article></main><footer class="bg-black bottom-0 w-100 pa3" role=contentinfo><div class="flex justify-between"><a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href=http://localhost:1313/>&copy; Группа игровой компьютерной индустрии: Семилучье 2025</a><div><div class=ananke-socials></div></div></div></footer></body></html>

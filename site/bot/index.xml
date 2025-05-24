@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Бот on Группа игровой компьютерной индустрии: Семилучье</title><link>http://localhost:1313/bot/</link><description>Recent content in Бот on Группа игровой компьютерной индустрии: Семилучье</description><generator>Hugo</generator><language>ru-ru</language><atom:link href="http://localhost:1313/bot/index.xml" rel="self" type="application/rss+xml"/><item><title>Простой бот</title><link>http://localhost:1313/bot/_rucovod/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/bot/_rucovod/</guid><description>&lt;h1 id="руководство-по-созданию-простого-telegram-бота">Руководство по созданию простого Telegram-бота&lt;/h1>
+&lt;h2 id="введение">Введение&lt;/h2>
+&lt;p>В этом руководстве мы создадим простейшего Telegram-бота, который будет отвечать на команды пользователя. Это идеальный проект для начинающих, позволяющий понять основы работы с Telegram Bot API.&lt;/p>
+&lt;h2 id="исследование-предметной-области">Исследование предметной области&lt;/h2>
+&lt;h3 id="анализ-возможностей-telegram-bot-api">Анализ возможностей Telegram Bot API&lt;/h3>
+&lt;p>Telegram предоставляет мощный API для создания ботов с такими возможностями:&lt;/p>
+&lt;ul>
+&lt;li>Отправка и получение сообщений&lt;/li>
+&lt;li>Работа с клавиатурами&lt;/li>
+&lt;li>Обработка команд&lt;/li>
+&lt;li>Хранение состояния&lt;/li>
+&lt;/ul>
+&lt;h3 id="выбор-инструментов">Выбор инструментов&lt;/h3>
+&lt;p>Для нашего бота мы будем использовать:&lt;/p>
+&lt;ul>
+&lt;li>Python 3.8+ (простой и понятный синтаксис)&lt;/li>
+&lt;li>Библиотеку python-telegram-bot (официальная обертка для API)&lt;/li>
+&lt;li>Виртуальное окружение (для изоляции зависимостей)&lt;/li>
+&lt;/ul>
+&lt;h2 id="техническое-руководство">Техническое руководство&lt;/h2>
+&lt;h3 id="подготовка-окружения">Подготовка окружения&lt;/h3>
+&lt;ol>
+&lt;li>Установите Python с официального сайта&lt;/li>
+&lt;li>Создайте папку для проекта&lt;/li>
+&lt;li>Создайте виртуальное окружение:
+python -m venv venv
+source venv/bin/activate (Для Linux/Mac)
+venv\Scripts\activate (Для Windows)&lt;/li>
+&lt;/ol>
+&lt;h3 id="установка-зависимостей">Установка зависимостей&lt;/h3>
+&lt;p>pip install python-telegram-bot&lt;/p></description></item><item><title>Создание моего бота</title><link>http://localhost:1313/bot/mybot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost:1313/bot/mybot/</guid><description>&lt;h1 id="техническое-руководство-telegram-бот-для-предсказания-гороскопов">Техническое руководство: Telegram-бот для предсказания гороскопов&lt;/h1>
+&lt;h2 id="введение">Введение&lt;/h2>
+&lt;p>Это руководство описывает создание Telegram-бота для генерации ежедневных гороскопов. Бот написан на Python с использованием библиотеки pyTelegramBotAPI.&lt;/p>
+&lt;h2 id="архитектура-системы">Архитектура системы&lt;/h2>
+&lt;h3 id="диаграмма-последовательностей">Диаграмма последовательностей&lt;/h3>
+&lt;p>&lt;img src="http://localhost:1313/images/%D0%B4%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC2.png" alt="диаграмма">&lt;/p>
+&lt;h2 id="пошаговая-реализация">Пошаговая реализация&lt;/h2>
+&lt;h3 id="настройка-проекта">Настройка проекта&lt;/h3>
+&lt;ol>
+&lt;li>Установите Python 3.8+&lt;/li>
+&lt;li>Установите необходимые библиотеки:
+pip install pyTelegramBotAPI&lt;/li>
+&lt;/ol>
+&lt;h3 id="структура-кода">Структура кода&lt;/h3>
+&lt;p>#Импорт библиотек
+import telebot
+from telebot import types
+import random&lt;/p>
+&lt;p>#Конфигурация бота
+TOKEN = &amp;ldquo;ВАШ_ТОКЕН&amp;rdquo;
+bot = telebot.TeleBot(TOKEN)&lt;/p>
+&lt;p>#Данные гороскопов
+zodiac_signs = [&amp;ldquo;Овен&amp;rdquo;, &amp;ldquo;Телец&amp;rdquo;, &amp;hellip;, &amp;ldquo;Рыбы&amp;rdquo;]
+horoscope_predictions = {
+&amp;ldquo;Овен&amp;rdquo;: [&amp;ldquo;Предсказание 1&amp;rdquo;, &amp;ldquo;Предсказание 2&amp;rdquo;],
+&amp;hellip;
+}&lt;/p></description></item></channel></rss>
